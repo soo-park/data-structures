@@ -20,7 +20,7 @@ var queueMethods = {
   },
   dequeue: function() {
     if (this.sizeCounter !== 0 ) {
-      this.sizeCounter--;      
+      this.sizeCounter--;
     }
 
     var dequeueValue = this.data[0];
