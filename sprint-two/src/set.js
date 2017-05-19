@@ -8,12 +8,12 @@ var setPrototype = {};
 
 setPrototype.add = function(item) {
   // add item as key in storage object
-  this._storage[item] = 0;
+  this._storage[item] = 1;
 };
 
 setPrototype.contains = function(item) {
   // check if item exists as a key of storage object and return the result
-  return this._storage[item] === 0;
+  return Boolean(this._storage[item]);
 };
 
 setPrototype.remove = function(item) {
