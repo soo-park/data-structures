@@ -1,6 +1,5 @@
-
-
 // Instantiate a new graph
+// Pomander linter checked
 var Graph = function() {
   this.edge = {};
 };

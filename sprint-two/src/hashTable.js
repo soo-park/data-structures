@@ -1,5 +1,4 @@
-
-
+// Pomander linter checked
 var HashTable = function() {
   this._limit = 8;
   this._storage = LimitedArray(this._limit);
