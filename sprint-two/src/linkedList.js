@@ -3,6 +3,39 @@ var LinkedList = function() {
   var list = {};
   list.head = null;
   list.tail = null;
+  
+  list.addToHead = function(value) { 
+    var newNode = Node(value); 
+    //when head is null : when it's first insertion 
+    if (list.head === null) {
+      
+      //assign head to new node
+      list.head = newNode; 
+      //assign tail to what head is pointing to  
+      list.tail = list.head;   
+    } else {
+      //assign next to new node
+      newNode.next = list.head;  
+      list.head.prev = newNode;
+      list.head = newNode;
+    } 
+
+  }; 
+
+  list.removeTail = function() { 
+    // check if node is empty
+    if (list.head !== null) {
+      if (list.head === list.tail) {
+        list.head = null;
+      }
+      //reassign previous node's next to null
+      list.tail.next = null;    
+      //reassign tail to previous node
+      list.tail = list.tail.prev;
+    }
+    
+  };
+
 
   list.addToTail = function(value) {
     var newNode = Node(value); 
@@ -54,6 +87,7 @@ var Node = function(value) {
 
   node.value = value;
   node.next = null;
+  node.prev = null;
 
   return node;
 };
