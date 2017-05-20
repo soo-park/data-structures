@@ -16,7 +16,6 @@ treeMethods.addChild = function(value) {
 };
 
 treeMethods.contains = function(target) {
-  // debugger;
   let childNode = {}; 
   // iterate through children node
   for (let i = 0; i < this.children.length; i++) {
