@@ -1,3 +1,4 @@
+// Pomander linter checked
 var Stack = function() {
   var someInstance = {};
 

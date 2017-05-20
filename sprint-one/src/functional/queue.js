@@ -1,3 +1,4 @@
+// Pomander linter checked
 var Queue = function() {
   var someInstance = {};
 
